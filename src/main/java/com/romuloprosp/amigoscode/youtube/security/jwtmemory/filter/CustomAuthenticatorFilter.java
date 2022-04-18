@@ -33,7 +33,6 @@ public class CustomAuthenticatorFilter extends UsernamePasswordAuthenticationFil
     private final AuthenticationManager authenticationManager;
 
     public CustomAuthenticatorFilter(AuthenticationManager authenticationManager){
-        log.info("custom passed");
         this.authenticationManager = authenticationManager;
     }
 
