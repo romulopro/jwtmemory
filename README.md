@@ -1,2 +1,13 @@
-Uma implementaÁ„o de JWT com Spring Boot e Spring Security incluindo tokens de acesso e atulaizaÁ„o
-Feito pelo vÌdeo : https://www.youtube.com/watch?v=VVn9OG9nfH0 
+Uma implementa√ß√£o de JWT com Spring Boot e Spring Security incluindo tokens de acesso e atulaiza√ß√£o
+
+Feito pelo v√≠deo : https://www.youtube.com/watch?v=VVn9OG9nfH0 
+
+To Do:
+
+[ ] Trocar a database;
+
+[ ] Escrever testes unit√°rios e de integra√ß√£o;
+
+[ ] Trocar a criptografia;
+
+[ ] Refatorar c√≥digo repetido
