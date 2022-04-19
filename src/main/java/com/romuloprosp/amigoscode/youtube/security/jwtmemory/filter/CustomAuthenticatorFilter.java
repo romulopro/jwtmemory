@@ -48,7 +48,7 @@ public class CustomAuthenticatorFilter extends UsernamePasswordAuthenticationFil
     @Override
     protected void successfulAuthentication(HttpServletRequest request, HttpServletResponse response, FilterChain chain, Authentication authentication) throws IOException, ServletException{
         User user = (User) authentication.getPrincipal();
-        //trocar secret em producao por algo encriptado
+        log.info("trocar secret em producao por algo encriptado");
         Algorithm algorithm = Algorithm.HMAC256("secret".getBytes());
         String access_token = JWT.create()
             .withSubject(user.getUsername())

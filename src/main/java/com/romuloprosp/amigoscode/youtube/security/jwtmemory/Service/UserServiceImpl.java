@@ -38,7 +38,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
             log.error("User not found in the database");
             throw new UsernameNotFoundException("User not found in the database");
         } else {
-            log.error("User found in the database: {}", username);
+            log.info("User found in the database: {}", username);
         }
         Collection<SimpleGrantedAuthority> authorities = new ArrayList<>();
         user.getRoles().forEach(role -> {
@@ -63,7 +63,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 
     @Override
     public void addRoleToUser(String username, String rolename) {
-        log.info("Addind role {}  to user {}", rolename, username);
+        log.info("Adding role {}  to user {}", rolename, username);
         User user = userRepo.findByUsername(username);
         Role role = roleRepo.findByName(rolename);
         user.getRoles().add(role);
